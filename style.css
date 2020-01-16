@@ -1,0 +1,18 @@
+html {
+    background-color: #1b1b1b;
+    color: white;
+    width: auto;
+}
+
+.headergames {
+    color: #0055c5;
+    font-weight: 10px;
+}
+
+strong {
+    color: #1b1b1b;
+}
+
+.grille {
+    margin: 20px;
+}

@@ -1,0 +1,28 @@
+{
+    "name": "electron-quick-start",
+    "version": "1.0.0",
+    "description": "A minimal Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": "https://github.com/450Oucema/rocket",
+    "keywords": [
+        "Electron",
+        "launcher",
+        "game"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^7.1.9"
+    },
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.4.1",
+        "mysql": "^2.17.1",
+        "node-powershell": "^4.0.0",
+        "popper.js": "^1.16.0",
+        "uikit": "^3.2.7"
+    }
+}
