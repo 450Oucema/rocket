@@ -31,7 +31,7 @@ connection.query('SELECT * FROM `jeu`', function(error, jeux, fields) {
 
     jeux.forEach(jeu => {
         console.log(jeu.nom);
-        $('.uk-thumbnav').append("<li id='" + jeu.id + "' ><a onclick='SelectionJeu(" + jeu.id + ");' class='thumbjeux'><img style='max-height: 115px; max-width: 200px;' src='minecraft.jpg'></a></li>");
+        $('.uk-thumbnav').append("<li id='" + jeu.id + "' ><a onclick='SelectionJeu(" + jeu.id + ");' class='thumbjeux'><img style='max-height: 115px; max-width: 200px;' src='" + jeu.cover + "'></a></li>");
     });
 
 });

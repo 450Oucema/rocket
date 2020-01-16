@@ -4,15 +4,44 @@ html {
     width: auto;
 }
 
-.headergames {
-    color: #0055c5;
+.bleu {
+    color: #3881e0;
     font-weight: 10px;
-}
-
-strong {
-    color: #1b1b1b;
 }
 
 .grille {
     margin: 20px;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #252525;
+}
+
+.uk-input {
+    background: transparent;
+    border: none;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.logo {
+    font-family: 'Fruktur', cursive;
+    color: #3881e0;
+}
+
+.thumbjeux {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.thumbjeux:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }

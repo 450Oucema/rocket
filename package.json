@@ -1,7 +1,7 @@
 {
-    "name": "electron-quick-start",
+    "name": "rocket",
     "version": "1.0.0",
-    "description": "A minimal Electron application",
+    "description": "Rocket est un launcher de jeux depuis le bureau, qui permet en un simple click de lancer le jeux que vous souhaitez",
     "main": "main.js",
     "scripts": {
         "start": "electron ."
