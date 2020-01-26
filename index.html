@@ -4,126 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-    <link rel="stylesheet" href="./node_modules/uikit/dist/css/uikit.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Fruktur|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/uikit/dist/css/uikit.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./node_modules/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
 
 
 </head>
 
 <body>
-    <nav class="uk-navbar-container uk-margin" uk-navbar>
-        <div class="uk-navbar-left">
 
-            <a class="uk-navbar-item uk-logo logo" href="#">ROCKET</a>
-
-            <ul class="uk-navbar-nav">
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+            <h1><a href="index.html" class="logo">ROCKET</a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="#"><button class="button button4"><span class="fa fa-home"></span></button></a>
+                </li>
                 <li>
-                    <a href="#">
-                        <strong><span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>JEUX</strong>
-                    </a>
+                    <a href="#"><button class="button button4"><span class="fa fa-user"></span></button></a>
+                </li>
+                <li>
+                    <a href="#"><button class="button button4"><span class="fa fa-cogs"></span></button></a>
                 </li>
             </ul>
+        </nav>
 
-            <div class="uk-navbar-item">
-                <div><a style="text-decoration: none;" href="#">Mon compte</a></div>
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <div class="uk-button-group">
+                                    <button class="uk-button uk-button-primary">Dropdown</button>
+                                    <div class="uk-inline">
+                                        <button class="uk-button uk-button-primary" type="button"><span><i class="fas fa-sort-down"></i></span></button>
+                                        <div uk-dropdown="mode: click; boundary: ! .uk-button-group; boundary-align: true;">
+                                            <ul class="uk-nav uk-dropdown-nav">
+                                                <li class="uk-active"><a href="#addgame" uk-toggle>Ajouter un jeux</a></li>
+                                                <li><a href="#">Item</a></li>
+                                                <li class="uk-nav-header">Header</li>
+                                                <li><a href="#">Item</a></li>
+                                                <li><a href="#">Item</a></li>
+                                                <li class="uk-nav-divider"></li>
+                                                <li><a href="#">Item</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <h1 style="text-align: center; " class="uk-heading-small headergames "></h1>
+            <div style="margin-top: 20px; " class="grille ">
+                <ul class="uk-thumbnav " uk-margin>
+                </ul>
             </div>
+        </div>
 
-            <div class="uk-navbar-item">
-                <form action="javascript:void(0)">
-                    <input class="uk-input uk-form-width-small" type="text" placeholder="Recherche">
+        <!-- MODAUX -->
+        <div id="addgame" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title">Ajouter un jeux à la bibliothèque</h2>
+                <form id="ajout_jeux">
+                    <div id="contenu_ajtjeux">
+                        <div class="js-upload uk-placeholder uk-text-center">
+                            <span uk-icon="icon: cloud-upload"></span>
+                            <span class="uk-text-middle">Glissez/déposez le fichier .exe de votre jeux ou</span>
+                            <div uk-form-custom>
+                                <input onchange="test();" type="file" name="file" id="fichier">
+                                <span class="uk-link">ouvrez le.</span>
+                            </div>
+                        </div>
+                        <div class="proposition"></div>
+                    </div>
                 </form>
             </div>
 
         </div>
-    </nav>
-    <div class="uk-container">
-        <h1 class="uk-heading-small">Vos favoris</h1>
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
 
-            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <li>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61nNAuN8k3L._AC_SY679_.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>1</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51pZ8xBJ-AL._AC_.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>2</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://www.actugaming.net/wp-content/uploads/2017/07/battlefield-V-cover.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>3</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61nNAuN8k3L._AC_SY679_.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>4</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://cultureposters.com/wp-content/uploads/2019/08/fortnite.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>5</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://www.actugaming.net/wp-content/uploads/2017/07/battlefield-V-cover.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>6</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61nNAuN8k3L._AC_SY679_.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>7</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://cultureposters.com/wp-content/uploads/2019/08/fortnite.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>8</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://www.actugaming.net/wp-content/uploads/2017/07/battlefield-V-cover.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>9</h1>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51pZ8xBJ-AL._AC_.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>10</h1>
-                    </div>
-                </li>
-            </ul>
 
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        <!-- You can also require other files to run in this process -->
+        <script src="./renderer.js "></script>
+        <script>
+            function test() {
+                var path = require('path')
+                var file = document.getElementById("fichier");
+                //alert(file.files[0].path);
+                //alert(file.files[0].name);
+                var nom = path.parse(file.files[0].name).name;
+                nom = nom.replace(/([A-Z])/g, ' $1').trim();
+                //alert("Nom : " + nom)
+                chemin = file.files[0].path;
+                repert = slash(chemin);
+                if (RechRAWGER(nom)) {
 
-        </div>
-    </div>
-    <hr>
-    <h1 style="text-align: center;" class="uk-heading-small headergames"></h1>
-    <div style="margin-top: 20px;" class="grille">
-        <ul class="uk-thumbnav" uk-margin>
+                } else {
+                    //Affichage de la saisie manuelle
+                }
+            }
 
-        </ul>
-    </div>
-
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js "></script>
-    <script>
-        $(".thumbjeux").click(function() {
-            alert('gogo');
-        });
-    </script>
+            $(".thumbjeux ").click(function() {
+                alert('gogo');
+            });
+        </script>
 </body>
 
 </html>
